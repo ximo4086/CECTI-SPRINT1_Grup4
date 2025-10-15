@@ -72,10 +72,10 @@ pytest -k "test_02_check_elements_Andrei"
 
 Per adaptar a altres navegadors, canviar a setup_class():
 
-# Per Chrome
+### Per Chrome
 cls.driver = webdriver.Chrome()
 
-# Per Edge
+### Per Edge
 cls.driver = webdriver.Edge()
 
-> Recorda que el teu script actual està configurat per Firefox amb geckodriver i execució headless.
+
