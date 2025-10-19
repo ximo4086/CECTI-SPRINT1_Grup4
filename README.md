@@ -6,12 +6,13 @@ Aquest codi conté tests automatitzats amb Selenium per al formulari de contacte
 
 ## Instal·lació de dependències
 
+```shell
 pip install -r requirements.txt
-
+```
 ## Requisits previs
 
 1. **Navegador Firefox**: El codi està configurat per utilitzar Firefox.
-2. **GeckoDriver**: Descarregar des de https://github.com/mozilla/geckodriver/releases
+2. **GeckoDriver**: Descarregar des [d'aquí](https://github.com/mozilla/geckodriver/releases).
 3. **Python 3.7+**
 
 ## Configuració del GeckoDriver
@@ -21,22 +22,29 @@ pip install -r requirements.txt
 2. Afegir la ruta al PATH del sistema
 3. O col·locar geckodriver.exe dins la carpeta del projecte
 
-### Linux/Mac:
+### Ubuntu/Debian
 
-# Ubuntu/Debian
+S'executa la següent comanda:
+```shell
 sudo apt-get install firefox-geckodriver
+```
 
-# O descarregar manualment i afegir al PATH
+O es descarrega [manualment](https://github.com/mozilla/geckodriver/releases) i s'afegeix al PATH:
+```shell
 export PATH=$PATH:/ruta/al/geckodriver
-
+```
 ## Execució dels tests
 
 ### Executar tots els tests:
+
+Des de la terminal situat on es troba el scriot:
+```shell
 pytest test_simple_firefox.py
-
+```
 ### Executar un test específic:
+```shell
 pytest -k "test_02_check_elements_Andrei"
-
+```
 > Nota: Els noms dels tests inclouen els teus noms personalitzats al final (Andrei, Ximo, Lucas) segons la funció de cada test.
 
 ## Tests inclosos
@@ -72,10 +80,11 @@ pytest -k "test_02_check_elements_Andrei"
 
 Per adaptar a altres navegadors, canviar a setup_class():
 
-### Per Chrome
+#### Per Chrome
+```shell
 cls.driver = webdriver.Chrome()
-
-### Per Edge
-cls.driver = webdriver.Edge()
-
+```
+#### Per Edge
+```shell
+cls.drive
 
